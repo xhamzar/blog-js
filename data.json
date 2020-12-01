@@ -1,77 +1,10 @@
 [
   {
     "id": 1,
-    "name": "Nama",
+    "name": "Cara Menulis kode CSS dalam HTML",
     "img": "https://www.petanikode.com/img/css/css.png",
     "symbol": "N",
-    "summary": "<p></p><figure class="mb-3"><img class="lazyload img-fluid blur-up lazyloaded" src="/img/css/css.png" data-src="/img/css/css.png" alt="Belajar CSS dari Nol"></figure><p></p><p>CSS adalah bahasa kedua setelah
-<a href="/html-dasar">HTML</a> yang harus dipelajari seorang <em>web developer</em>.</p><p>Pengetahuan tentang CSS sangatlah penting bagi seorang web developer, karena dengan CSS
-kita bisa:</p><ul><li>Halaman <em>landing page</em> yang menarik;</li><li>Template atau tema blog;</li><li>Mengubah PSD (Desain web) menjadi HTML;</li><li>dan sebagainya.</li></ul><p>Contohnya, bagaimana tampilan facebook tanpa CSS?</p><p>Mungkin bisa seperti ini:</p><p></p><figure class="mb-3"><img class="lazyload img-fluid blur-up lazyloaded" src="https://2.bp.blogspot.com/-R93-cUFP-Lc/VZsMcMecDKI/AAAAAAAABlQ/Kbk66QwSqX0/s1600/website%2Btampa%2Bcss%2Bdan%2Bdengan%2Bcss.png" data-src="https://2.bp.blogspot.com/-R93-cUFP-Lc/VZsMcMecDKI/AAAAAAAABlQ/Kbk66QwSqX0/s1600/website%2Btampa%2Bcss%2Bdan%2Bdengan%2Bcss.png" alt="Gambar Situs web tampa css dan dengan css"></figure><p></p><p>Pada artike ini, kita akan membahas pengenalan dasar CSS, seperti:</p><ul><li>Apa itu CSS?</li><li>Struktur dasar CSS;</li><li>Cara Menuliskan CSS di HTML;</li><li>Tips Belajar CSS</li></ul><p>Mari kita mulai…</p><h2 id="apa-itu-css" class="h2">Apa itu CSS?</h2><p>CSS <em>(Cascade Style Sheet)</em> meruapakan sebuah bahasa untuk mengatur tampilan
-web sehingga terlihat lebih menarik dan indah.</p><p>Dengan CSS, kita dapat mengatur <em>layout</em> (tata letak), warna, font, garis,
-dan lain-lain.</p><p>CSS pertama kali diperkenalkan oleh
-<a href="https://en.wikipedia.org/wiki/H%C3%A5kon_Wium_Lie" target="_blank">Håkon Wium Lie<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11" height="10" viewBox="0 0 11 10" aria-label="External Link" style="margin:0 .15rem"><polygon fill="#00ad9f" points="12 5.038 6.962 10.066 5.668 8.772 8.502 5.961 0 5.961 0 4.116 8.502 4.116 5.691 1.282 6.984 0" transform="rotate(-40 6 5.033)"></polygon></svg></a>
-pada tahun 1994.</p><h3 id="variasi-atau-versi-css" class="h3">Variasi atau Versi CSS</h3><p>Sejak awal diperkenalkan CSS memiliki beberapa variasi:</p><ol><li>CSS 1: adalah versi pertama (17 Desember 1996)</li><li>CSS 2: adalah versi ke-2 (Mei 1998)</li><li>CSS 2.1: (7 juni 2011)</li><li>CSS 3: (2012)</li><li>CSS 4: masih dalam pengembangan.</li></ol><p>Apa bedanya dari setiap versi tersebut?</p><p>Tentunya ada penambahan dan pengurangan…</p><h2 id="struktur-kode-atau-sintaks-dasar-css" class="h2">Struktur Kode atau Sintaks Dasar CSS</h2><p>Struktur kode CSS terdiri dari tiga bagian:</p><ol><li>Selektor;</li><li>Blok Deklarasi;</li><li>Properti dan nilanya.</li></ol><p>Contoh:</p><p></p><figure class="mb-3"><img class="lazyload img-fluid blur-up" src="/img/placeholder.svg" data-src="/img/css/dasar/sintaks-css.png" alt="Sintaks dasar CSS"></figure><p></p><p>Mari kita bahas satu per satu…</p><h3 id="selektor" class="h3">Selektor</h3><p>Selektor adalah kata kunci untuk memilih elemen HTML yang akan kita atur.</p><p>Contohnya:</p><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#ff79c6">h1</span> {
-    <span style="color:#ff79c6">color</span>: <span style="color:#ff79c6">red</span>;
-}
-</code></pre></div><p>Artinya: Kita memilih semua elemen <code>&lt;h1&gt;</code>, lalu diberikan warna teks <code>red</code> (merah).</p><p>Selektor dapat berupa nama tag, class, id, dan atribut.</p><p>Contoh:</p><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#6272a4">/* Selektor dengan nama tag */</span>
-<span style="color:#ff79c6">h2</span> {
-    <span style="color:#ff79c6">color</span>: <span style="color:#ff79c6">blue</span>
-}
-
-<span style="color:#6272a4">/* Selektor degnan class */</span>
-.<span style="color:#50fa7b">bg-yellow</span> {
-    backgound-color: <span style="color:#ff79c6">yellow</span>;
-}
-
-<span style="color:#6272a4">/* selektor dengan ID elemen */</span>
-#header {
-    <span style="color:#ff79c6">background</span>: <span style="color:#ff79c6">grey</span>;
-}
-
-<span style="color:#6272a4">/* Selektor dengan Atribut */</span>
-<span style="color:#ff79c6">input</span><span style="color:#ff79c6">[</span><span style="color:#ff79c6">type</span><span style="color:#ff79c6">=</span><span style="color:#ff79c6">text</span><span style="color:#ff79c6">]</span>{
-    <span style="color:#ff79c6">background</span>: <span style="color:#ff79c6">yellow</span>;
-}
-</code></pre></div><p>Pembahasan lebih dalam tentang selektor dapat dibaca pada:
-<a href="/css-selektor/">Memahami Selektor pada CSS</a></p><h3 id="blok-deklarasi" class="h3">Blok Deklarasi</h3><p>Blok deklarasi adalah tempat kita menuliskan atribut-atibut CSS yang akan
-diberikan ke pada selektor.</p><p>Contoh:</p><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#ff79c6">p</span> {
-    <span style="color:#ff79c6">font-size</span>: <span style="color:#bd93f9">18</span><span style="color:#8be9fd">px</span>;
-}
-</code></pre></div><p>Artinya, kita akan mengatur ukuran font dari tag <code>&lt;p&gt;</code> sebesar <code>18px</code>.</p><p>Blok deklarasi dimulai atau dibuka dengan tanda kurung <code>{</code> lalu ditutup dengan <code>}</code>.</p><h3 id="properti-dan-nilainya" class="h3">Properti dan Nilainya</h3><p>Properti merupakan atribut atau sekumpulan aturan yang akan diberikan kepada
-elemen yang dipilih.</p><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#ff79c6">properti</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">"nilai"</span><span style="color:#ff79c6">;</span>
-</code></pre></div><p>Setiap properti harus diakhiri dengan titik koma (<code>;</code>). Apabila hanya terdapat
-satu properti, boleh tidak menggunakan titik koma.</p><p>Properti harus ditulis di dalam blok deklarasi.</p><p>Contoh:</p><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#ff79c6">blockquote</span> {
-    <span style="color:#ff79c6">background</span>: <span style="color:#ff79c6">pink</span>;
-}
-</code></pre></div><p>Jangan tulis seperti ini:</p><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#ff79c6">background</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">pink</span><span style="color:#ff79c6">;</span>
-
-<span style="color:#ff79c6">p</span> {
-
-}
-</code></pre></div><h2 id="cara-menulis-kode-css-dalam-html" class="h2">Cara Menulis kode CSS dalam HTML</h2><p>Penulisan kode CSS di HTML dapat dilakukan di dalam tag <code>&lt;style&gt;</code>. Tag tersebut dapat ditulis di dalam tag <code>&lt;head&gt;</code> atau <code>&lt;body&gt;</code>.</p><p>Kebanyakan orang menulisnya di dalam tag <code>&lt;head&gt;</code>. Perhatiakn contoh berikut ini:</p><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#ff79c6">&lt;!DOCTYPE html&gt;</span>
-&lt;<span style="color:#ff79c6">html</span>&gt;
-&lt;<span style="color:#ff79c6">head</span>&gt;
-&lt;<span style="color:#ff79c6">title</span>&gt;Contoh Penulisan kode CSS&lt;/<span style="color:#ff79c6">title</span>&gt;
-
-&lt;<span style="color:#ff79c6">style</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">"text/css"</span>&gt;
-    <span style="color:#ff79c6">p</span> { <span style="color:#ff79c6">color</span>: <span style="color:#ff79c6">red</span> }
-&lt;/<span style="color:#ff79c6">style</span>&gt;
-
-&lt;/<span style="color:#ff79c6">head</span>&gt;
-
-&lt;<span style="color:#ff79c6">body</span>&gt;
-    &lt;<span style="color:#ff79c6">p</span>&gt;Sebuah contoh paragraf yang sudah diberikan oleh kode CSS&lt;/<span style="color:#ff79c6">p</span>&gt;
-&lt;/<span style="color:#ff79c6">body</span>&gt;
-&lt;/<span style="color:#ff79c6">html</span>&gt;
-</code></pre></div><p>Hasilnya, elemen <code>&lt;p&gt;</code> akan berwarna merah:</p><p></p><figure class="mb-3"><img class="lazyload img-fluid blur-up" src="/img/placeholder.svg" data-src="/img/css/dasar/css-di-html.png" alt="Contoh CSS untuk HTML"></figure><p></p><p>Selain dengan cara ini, ada dua cara lagi yang bisa digunakan:</p><ol><li>Inline CSS</li><li>Eksternal CSS</li></ol><p>Silahkan baca di:
-<a href="/css-dalam-html/">Cara Menulis Kode CSS di dalam HTML</a></p><h2 id="tips-belajar-css" class="h2">Tips Belajar CSS</h2><p>Ada beberapa tips yang ingin saya bagikan untuk membantu teman-teman
-dalam belajar CSS:</p><h3 id="tips-1-cara-menghapal-kode-dan-properti-css" class="h3">Tips #1: Cara Menghapal Kode dan Properti CSS</h3><p>Ada ratusan properti CSS yang harus diingat.</p><p>Apakah kita akan mampu menghapal semuanya?</p><p>Tergantung…</p><p>Jika kamu sering mengetik kode CSS tanpa <em>copas</em>,
-bisa jadi ingatanmu terhadap kode atau properti CSS akan
-semkkin kuat.</p><h3 id="tips-2-gunakan-inspect-elemen" class="h3">Tips #2: Gunakan Inspect Elemen</h3><p><a href="/inspect-element">Inspect elemen</a> ada di setiap browser.
-Bisa dibuka dengan Klik kanan, lalu pilih <em>Inspect Element</em>.</p><p>Di inspect elemen, kita bisa menulis kode CSS secara langsung dan
-hasilnya pun akan langsung kita ketahui.</p><p></p><figure class="mb-3"><img class="lazyload img-fluid blur-up" src="/img/placeholder.svg" data-src="https://4.bp.blogspot.com/-YA3lbRkw6z0/WKhR5OizENI/AAAAAAAAEAU/vxaVOYaLjBExO0cpMeCw1vnzf3lbMbrswCPcB/s1600/Edit%2BCSS%2Bdi%2BInspect%2BElement.png" alt="Menulis kode CSS di dalam Inscpect Element"></figure><p></p><h3 id="tups-3-gunakan-cheat-sheet" class="h3">Tups #3: Gunakan Cheat Sheet</h3><p>Cheat Sheet adalah halaman yang berisi contekan kode CSS.</p><p>Tunggu dulu…</p><p>Contekan?</p><p>Apakah boleh?</p><p>Ya tentu saja boleh.</p><p>Ini kan bukan ujian.</p><p>Kamu bisa mencari <em>cheat sheet</em> CSS di Google dengan kata kunci “CSS Cheat Sheet”.</p><p></p><figure class="mb-3"><img class="lazyload img-fluid blur-up" src="/img/placeholder.svg" data-src="/img/css/dasar/cheat-sheet.png" alt="CSS Cheat Sheet"></figure><p></p><p>Silahkan di-download, lalu di-print.</p><p>Setelah itu bisa ditempel di depan meja atau ditaruh di atas meja.</p><p>Kapanpun butuh contekan, kita bisa melihatnya. 😏</p><h2 id="apa-selanjutnya" class="h2">Apa Selanjutnya?</h2><p>Kita sudah mengenal hal dasar dalam CSS seperti:</p><ol><li><p>Stuktur Dasar CSS yang terdiri dari</p><ul><li>Selektor;</li><li>Blok deklarasi;</li><li>dan properti.</li></ul></li><li><p>Cara menulis CSS di HTML.</p></li></ol><p>Lalu apa selanjutnya?</p><p>Selanjutnya silahkan pelajari lebih dalam tentang
-<a href="/css-selektor/">Selektor</a>
-dan latihan dengan beberapa properti yang sering digunakan.</p><p>Selamat belajar…</p>"
+    "summary": "<p>Cara Menulis kode CSS dalam HTML</p>"
   "named_by":"Susu",
     "discovered_by": "Hamzar",
     "atomic_mass": "54",
@@ -80,6 +13,7 @@ dan latihan dengan beberapa properti yang sering digunakan.</p><p>Selamat belaja
   {
   "id": 2,
       "name": "Nama2",
+      "img": "https://www.petanikode.com/img/css/css.png",
       "symbol": "N2",
       "summary": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in nulla nunc. Duis augue est, rutrum at cursus id, scelerisque nec est. Suspendisse potenti. Vestibulum porttitor erat porttitor libero lacinia rhoncus. Integer fermentum pulvinar ex a ultrices. Cras gravida a velit at blandit. Proin euismod vel nisl sit amet tincidunt. Fusce vitae neque tincidunt, posuere erat rhoncus, mattis sapien. Proin sollicitudin ut mi a efficitur. Phasellus fermentum aliquam ex. Fusce ultricies, odio vel interdum efficitur, neque mi dictum eros, eget elementum nibh mauris eget tellus. Vestibulum interdum felis nec bibendum rutrum. Morbi interdum urna sem, et porttitor sem ullamcorper non.</p><p>Donec ac sem mi. Cras viverra est magna, feugiat euismod nibh hendrerit ac. Sed in tempus nunc, sed sodales libero. Morbi aliquet nibh eget nisi pulvinar, eu malesuada urna pulvinar. Quisque laoreet hendrerit libero, vel imperdiet erat rhoncus non. Nullam arcu tortor, pulvinar non lacus eu, molestie faucibus metus. Aliquam tempus felis et enim faucibus, in posuere velit dignissim. Aliquam id tempus justo. Vestibulum fermentum massa vel felis dignissim, vel dignissim sem convallis. Phasellus rhoncus nisi sit amet tristique faucibus. Aenean a arcu quam. Pellentesque sed nunc laoreet, molestie orci dapibus, vehicula mauris. Aliquam nec efficitur lorem, vel varius quam. Aenean risus diam, egestas a luctus ac, rutrum vel elit. Praesent consequat urna augue. Vestibulum euismod, velit id elementum molestie, massa risus semper felis, in lobortis massa eros interdum eros.</p><p>Donec vitae pretium nibh, elementum aliquam metus. Suspendisse quis elit volutpat, pulvinar ligula et, posuere lacus. Nullam sit amet risus ac mi varius consectetur. Aliquam lectus mi, semper nec dui ac, semper lacinia velit. Aliquam elementum vestibulum vulputate. Nullam iaculis ipsum et urna iaculis, sed efficitur sapien condimentum. Pellentesque suscipit accumsan arcu, non pretium libero placerat at. Proin non tortor quis sapien sagittis consectetur. Duis nec pellentesque nisl. Aenean mi eros, fermentum sit amet ultrices non, rhoncus sed justo. Proin eu ornare odio. Cras rhoncus sapien ac vulputate imperdiet. Suspendisse interdum purus magna. Praesent euismod quam id massa scelerisque aliquam. Vivamus id libero at tortor porta tincidunt id et risus.</p><p>Ut vehicula accumsan erat, ut condimentum libero vulputate nec. Sed id lacus dolor. Vivamus eu lacus vel tortor lobortis euismod. Aenean in venenatis orci. Nunc in nisi et metus gravida porta auctor id nisi. Vestibulum lobortis efficitur enim vel pharetra. Aenean arcu nibh, maximus a elit quis, posuere convallis mi. Donec sed ornare lectus. Etiam porta consectetur congue.</p>",
     "named_by":"Susu",
