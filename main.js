@@ -2,7 +2,7 @@
 
 
 const Home = {
-  template: "<div><h1>Periodic Table</h1><p>A Vue.js Example by Daniel Wakefield</div>"
+  template: "<div><h1>EX-ZAR</h1><p>Projek Blog Sederhana</div>"
 };
 
 const apiUrl = "data.json";
