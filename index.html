@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - KOMPLIT</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container" id="app">
+  
+  <div class="row router">
+      <router-view></router-view>
+  </div>
+             
+<div class="row filters">
+        <button v-on:click="sortNames">Sort by Name</button>
+        <button v-on:click="sortSymbols">Sort by Symbol</button>
+        <button v-on:click="sortCategories">Sort by Category</button>
+    </div>
+
+  <div class="row filter input-group"> 
+    <input type="text" placeholder="Search by Name" v-model="filter_name"/>
+  </div>
+  
+  <div class="row grid">
+    <div class="grid__item flex" v-for="(r, index) in filteredNames.slice(pageStart, pageStart + countOfPage)">
+        <img class="image" :src="r.img" />
+        <span class="kananatas">{{ r.symbol }}</span>
+        <a class="tengahbawah" v-bind:href=" 'lihat.html#/post/' +r.id">{{ r.name }}</a>
+    </div>
+  </div>
+
+  <nav aria-label="Page navigation example">
+    <ul class="row pagination">
+      <li class="page-item" v-bind:class="{'disabled': (currPage === 1)}" @click.prevent="setPage(currPage-1)"><a class="page-link" href="">Prev</a></li>
+      <li class="page-item" v-for="n in totalPage" v-bind:class="{'active': (currPage === (n))}" @click.prevent="setPage(n)"><a class="page-link" href="">{{n}}</a></li>
+      <li class="page-item" v-bind:class="{'disabled': (currPage === totalPage)}" @click.prevent="setPage(currPage+1)"><a class="page-link" href="">Next</a></li>
+    </ul>
+  </nav>
+  
+  <MyFooter></MyFooter>
+</div>
+
+
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js'></script>
+<script src='https://unpkg.com/vue-router/dist/vue-router.js'></script>
+<script src='https://unpkg.com/vuex'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js'></script><script  src="main.js"></script>
+
+</body>
+</html>
